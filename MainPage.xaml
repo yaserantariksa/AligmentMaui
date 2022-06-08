@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Aligment.MainPage">
+
+    <Grid Margin="10" Padding="10" RowDefinitions="Auto,Auto,*">
+        <VerticalStackLayout  Grid.Row="0">
+            <Label Text="Horizontal Aligment :" Margin="3" HorizontalOptions="CenterAndExpand"/>
+            <HorizontalStackLayout HorizontalOptions="CenterAndExpand">
+                <Button Text="Start" Clicked="OnHorizontalStartClicked" Margin="3" WidthRequest="75" />
+                <Button Text="Center" Clicked="OnHorizontalCenterClicked" Margin="3" WidthRequest="75" />
+                <Button Text="End" Clicked="OnHorizontalEndClicked" Margin="3" WidthRequest="75" />
+                <Button Text="Fill" Clicked="OnHorizontalFillClicked" Margin="3" WidthRequest="75"/>
+            </HorizontalStackLayout>
+        </VerticalStackLayout>
+
+        <VerticalStackLayout Grid.Row="1">
+            <Label Text="Vertical Aligment :" Margin="3" HorizontalOptions="CenterAndExpand"/>
+            <HorizontalStackLayout HorizontalOptions="CenterAndExpand">
+                <Button Text="Start" Clicked="OnVerticalStartClicked" Margin="3" WidthRequest="75"/>
+                <Button Text="Center" Clicked="OnVerticalCenterClicked" Margin="3" WidthRequest="75"/>
+                <Button Text="End" Clicked="OnVerticalEndClicked" Margin="3" WidthRequest="75"/>
+                <Button Text="Fill" Clicked="OnVerticalFillClicked" Margin="3" WidthRequest="75"/>
+            </HorizontalStackLayout>
+        </VerticalStackLayout>
+        <VerticalStackLayout x:Name="target" Grid.Row="2" Margin="20" Padding="3" BackgroundColor="Purple">
+            <HorizontalStackLayout>
+                <Label Text="Horizontal Aligment : " FontSize="Default" TextColor="White"/>
+                <Label x:Name=" horizontalAligmentLabel" Grid.Row="2" Text=" Horizontal" FontSize="Default" TextColor="White"/>
+            </HorizontalStackLayout>
+            <HorizontalStackLayout>
+                <Label Text="Vertical Aligment : " FontSize="Default" TextColor="White"/>
+                <Label x:Name=" verticalAligmentLabel" Grid.Row="2" Text=" Vertical" FontSize="Default" TextColor="White"/>
+            </HorizontalStackLayout>       
+        </VerticalStackLayout>
+        
+    </Grid>
+ 
+</ContentPage>
